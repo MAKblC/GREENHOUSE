@@ -48,8 +48,8 @@ BH1750 lightMeter; // Датчик освещенности
 #include <VEML6075.h>         // добавляем библиотеку датчика ультрафиолета // adding Ultraviolet sensor library 
 
 // Выберите датчик вашей сборки (ненужные занесите в комментарии)
-//#define MGS_GUVA 1
-#define MGS_CO30 1
+#define MGS_GUVA 1
+//#define MGS_CO30 1
 //#define MGS_UV60 1
 
 #ifdef MGS_CO30
@@ -191,25 +191,25 @@ void handleNewMessages(int numNewMessages)
       float t1 = ((adc1 / 4095.0 * 5.0) - 0.3) * 100.0; // АЦП разрядность (12) = 4095
       float h1 = map(adc0, air_value, water_value, moisture_0, moisture_100);
 #endif
-      String welcome = "Показания датчиков:\n";
-      welcome += "Temp: " + String(t, 1) + " C\n";
-      welcome += "Hum: " + String(h, 0) + " %\n";
-      welcome += "Press: " + String(p, 0) + " hPa\n";
-      welcome += "Light: " + String(light) + " Lx\n";
-      welcome += "Soil temp: " + String(t1, 0) + " C\n";
-      welcome += "Soil hum: " + String(h1, 0) + " %\n";
+      String welcome = "Показания датчиков:\n-------------------------------------------\n";
+      welcome += "🌡 Температура воздуха: " + String(t, 1) + " °C\n";
+      welcome += "💧 Влажность воздуха: " + String(h, 0) + " %\n";
+      welcome += "☁ Атмосферное давление: " + String(p, 0) + " мм рт.ст.\n";
+      welcome += "☀ Освещенность: " + String(light) + " Лк\n\n";
+      welcome += "🌱 Температура почвы: " + String(t1, 0) + " °C\n";
+      welcome += "🌱 Влажность почвы: " + String(h1, 0) + " %\n\n";
 #ifdef MGS_UV60
-      welcome += "UVA: " + String(uva, 0) + " mkWt/cm2\n";
-      welcome += "UVB: " + String(uvb, 0) + " mkWt/cm2\n";
-      welcome += "UV Index: " + String(uv_index, 1) + " \n";
+      welcome += "🅰 Ультрафиолет-А " + String(uva, 0) + " mkWt/cm2\n";
+      welcome += "🅱 Ультрафиолет-В: " + String(uvb, 0) + " mkWt/cm2\n";
+      welcome += "🔆 Индекс УФ: " + String(uv_index, 1) + " \n";
 #endif
 #ifdef MGS_GUVA
-      welcome += "Sensor voltage: " + String(sensorVoltage, 1) + " mV\n";
-      welcome += "UV Index: " + String(UV_index, 1) + " \n";
+      welcome += "📊 Уровень УФ: " + String(sensorVoltage, 1) + " mV\n";
+      welcome += "🔆 Индекс УФ: " + String(UV_index, 1) + " \n";
 #endif
 #ifdef MGS_CO30
-      welcome += "CO2: " + String(mySensor.CO2) + " ppm\n";
-      welcome += "TVOC: " + String(mySensor.TVOC) + " ppb\n";
+      welcome += "🌬 Концентрация СО2: " + String(mySensor.CO2) + " ppm\n";
+      welcome += "☢ Концентрация ЛОС: " + String(mySensor.TVOC) + " ppb\n";
 #endif
       bot.sendMessage(chat_id, welcome, "Markdown");
 
