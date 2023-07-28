@@ -2,7 +2,7 @@
 
 Набор "Умная Теплица ЙоТик М2" предназначен для изучения основных понятий о технологии Интернет-вещей (IoT). Теплицы являются одними из самых популярных объектов, где активно применяется технология IoT – управление системой выращивания растений.
 
-![greenhouse](https://mgbot.ru/upload/iblock/5c7/5c7fc4254cf955f561cca3d1989b129f.jpg)
+![greenhouse](https://mgbot.ru/upload/iblock/eb4/twfprv0w00sx4u4mv4nn6rmpgzruqhu9.jpg)
 
 [Ссылка на сайте производителя](https://mgbot.ru/catalog/obrazovatelnye_nabory_iot/nabor_umnaya_teplitsa_yotik_m2/)
 
