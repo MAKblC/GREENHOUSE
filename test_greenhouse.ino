@@ -169,7 +169,7 @@ void loop()
 #ifdef MGB_P8
   float adc0 = analogRead(SOIL_MOISTURE);
   float adc1 = analogRead(SOIL_TEMPERATURE);
-  float t1 = ((adc1 / 4095.0 * 5.0) - 0.3) * 100.0; // АЦП разрядность (12) = 4095
+  float t1 = ((adc1 / 4095.0 * 6.27) - 0.5) * 100.0; // АЦП разрядность (12) = 4095 и коэф. для напряжения ~4,45В
   float h1 = map(adc0, air_value, water_value, moisture_0, moisture_100);
   Serial.println("soil temperature = " + String(t1, 1) + " °C");
   Serial.println("soil humidity = " + String(h1, 1) + " %");
