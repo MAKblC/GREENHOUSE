@@ -94,8 +94,12 @@ void setup()
   lightMeter.begin();              // запуск датчика освещенности // turn the light intensity sensor on
  
   bool bme_status = bme280.begin();
-  if (!bme_status)
-    Serial.println("Could not find a valid BME280 sensor, check wiring!");  // проверка  датчика температуры, влажности и давления // checking the temp hum bar sensor
+  if (!bme_status) {
+    Serial.println("Не найден по адресу 0х77, пробую другой...");
+    bme_status = bme280.begin(0x76);
+    if (!bme_status)
+      Serial.println("Датчик не найден, проверьте соединение");
+  }
 
 #ifdef MGS_UV60
   if (!veml6075.begin())
