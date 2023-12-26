@@ -25,6 +25,7 @@
 | MCP3221_modified.zip   | библиотека для MGS-GUVA|
 |SparkFun_SGP30_Arduino_Library-1.0.5.zip | библиотека для MGS-CO30|
 | VEML6075.zip   |библиотека для MGS-UV60|
+| greenhouseDemo.ino  | скетч для локального сервера|
 | GreenhouseNewBlynk.ino  | скетч для Blynk новой версии|
 | greenhouse_telegram.ino   | скетч для Telegram|
 | test_greenhouse.ino   | скетч для тестирования устройств|
