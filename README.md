@@ -22,6 +22,7 @@
 | FastLED-master.zip  | библиотека для матрицы |
 | FastLED-GFX-master.zip    |библиотека для матрицы|
 | FastLEDMatrix-master.zip   | библиотека для матрицы|
+| GyverPortal.zip   | библиотека для локального сервера|
 | MCP3221_modified.zip   | библиотека для MGS-GUVA|
 |SparkFun_SGP30_Arduino_Library-1.0.5.zip | библиотека для MGS-CO30|
 | VEML6075.zip   |библиотека для MGS-UV60|
