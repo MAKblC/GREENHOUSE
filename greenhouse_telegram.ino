@@ -185,7 +185,7 @@ void handleNewMessages(int numNewMessages)
 
       float t = bme280.readTemperature();
       float h = bme280.readHumidity();
-      float p = bme280.readPressure() / 100.0F;
+      float p = bme280.readPressure() / 133.3F;
 
 #ifdef MGB_D1015
       float adc0 = (float)ads.readADC_SingleEnded(0) * 6.144 * 16;
