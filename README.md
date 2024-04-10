@@ -14,6 +14,7 @@
 
 | Название    | Описание |
 | ----------- | -----------|
+|GoogleSheet   | код и скрипт для управления теплицей с помощью Гугл-таблиц|
 |Adafruit_ADS1X15.zip   | библиотека для  MGB-D1015|
 | Adafruit_BME280_Library.zip      | библиотека для MGS-THP80 |
 | Adafruit_Unified_Sensor.zip     | библиотека для MGS-THP80 |
